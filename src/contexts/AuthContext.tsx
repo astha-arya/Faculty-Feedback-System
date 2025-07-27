@@ -22,10 +22,10 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const login = async (email: string, password: string): Promise<boolean> => {
     setIsLoading(true);
     
-    // Simulate API call - replace with actual authentication
+
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    // Mock successful login - replace with real authentication logic
+  
     if (email && password) {
       const mockUser: User = {
         id: '102910',
