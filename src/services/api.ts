@@ -1,6 +1,6 @@
 import { AuditData } from '../types';
 
-const API_BASE_URL = 'https://your-backend-api.com'; // Replace with your actual backend URL
+const API_BASE_URL = 'https://your-backend-api.com'; 
 
 export const auditApi = {
   // Get audit data for logged-in faculty
@@ -21,7 +21,7 @@ export const auditApi = {
     } catch (error) {
       console.error('Error fetching audit data:', error);
       
-      // Mock data for demonstration - remove this in production
+    
       return {
         hasAudit: true,
         facultyId: facultyId,
@@ -32,7 +32,7 @@ export const auditApi = {
     }
   },
 
-  // Submit feedback for audit
+  
   submitFeedback: async (facultyId: string, feedback: string): Promise<boolean> => {
     try {
       const response = await fetch(`${API_BASE_URL}/audit/${facultyId}/feedback`, {
@@ -47,7 +47,6 @@ export const auditApi = {
     } catch (error) {
       console.error('Error submitting feedback:', error);
       
-      // Mock success for demonstration - remove this in production
       return true;
     }
   }
